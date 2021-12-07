@@ -6,12 +6,12 @@ const s = 'ababababa';
 str = [];
 json = {key: null,
 		value: 0}
-function slicer(s,i,j){     //helper function to split string and  save to array
+function slicer(s,i,j){     //helper function to slice string and  save to array
 	str = s.slice(i, j);
 	return str
 }
 
-function reverseStr(s){    //helper function to return a string
+function reverseStr(s){    //helper function to reverse a string
 	var arr1 = s.split('');
 	var arr2 = [];
  for (var i = 0 ; i < arr1.length;  i++) {
@@ -22,7 +22,7 @@ function reverseStr(s){    //helper function to return a string
 	}
 
 
-function solve(s){      // function to generate substrings and solve and test substrings to see if it is a palindrome
+function solve(s){      // function to generate substrings, solve and test substrings to see if it is a palindrome
 	for( var i = 0; i < s.length ; i++){
 			for (var j = 0; j < s.length + 1; j ++) {
 				var temp = slicer(s,i,j)
